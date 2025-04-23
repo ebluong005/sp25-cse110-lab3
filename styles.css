@@ -35,12 +35,13 @@ header > h3 {
 
 /* =================== NAVIGATION =================== */
 nav {
-    position: sticky; /* required position property */
+    position: sticky;
     top: 0;
-    background-color: color(display-p3 0.2 0.8 0.4);
+    background-color: rgb(51, 204, 102); 
     z-index: 1000;
     padding: 10px 0;
 }
+
 
 nav ul {
     display: flex;
