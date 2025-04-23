@@ -1,0 +1,25 @@
+/* styles.css */
+
+/* CSS Variable with Fallback */
+:root {
+    --main-color: rgb(3, 4, 3);
+    --accent-color: #4CAF50;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-color, black);
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style header using Flexbox */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--accent-color, green);
+    padding: 1rem;
+    color: white;
+}
