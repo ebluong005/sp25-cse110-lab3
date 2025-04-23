@@ -16,6 +16,7 @@ body {
 
 /* Style header using Flexbox */
 header {
+    position: relative; /* 👈 Adds positioning context */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,6 +62,9 @@ button:active {
     gap: 1rem;
     padding-left: 1.5rem;
     list-style: disc;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #agenda ol {
@@ -72,18 +76,35 @@ button:active {
 
 section {
     border: 1px solid #034608;
-    padding: 16px;
-    margin: 12px auto;
-    border-width: 8px;
+    padding: 0.2in;
+    margin-bottom: 12px;
+    border-width: 50vw;
     border-color: #388e3c;
 }
 
 form {
-    border: 2px dashed #034608;
-    padding: 20px;
+    border-style: solid;
+    border-color: color(display-p3 0 0.7 0.3);
+    border-width: 2px;
+    border-radius: 10px;
+  
+    /* padding - longhand and shorthand */
+    padding-top: 20px;
+    padding-right: 2em;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding: 20px 40px;
+  
+    /* margin - longhand and shorthand */
     margin-top: 10px;
-}
-
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin: 10px auto 20px auto;
+  
+    /* Center the form horizontally */
+    max-width: 600px;
+  }
 fieldset {
     border: 3px double #034608;
     padding: 20px;
@@ -94,10 +115,10 @@ fieldset {
 }
 
 .whiteboard-img {
-    min-width: none;
+    min-width: 300px;
     height: auto;
     display: block;
-    margin: 0 auto; /* centers it */
+    margin: auto; /* centers it */
 }
 /*Media query for small to medium screens */
 @media (max-width: 768px) {
