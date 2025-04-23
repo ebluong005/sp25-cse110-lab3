@@ -24,14 +24,49 @@ header {
     color: white;
 }
 
-/* Box borders */
-
 #meeting-minutes {
     margin: 20px auto;
     padding: 16px 32px;
     border: 2px solid #034608;
     border-radius: 8px;
     max-width: 800px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #7fc984;
+    z-index: 1000;
+    padding-bottom: 10px;
+}
+
+/* Hover effect for links in nav */
+nav a:hover {
+    text-decoration: underline;
+    color: #3f0338;
+}
+  
+/* Active button */
+button:active {
+    transform: scale(0.50);
+    background-color: #388e3c;
+}
+
+
+#attendance ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+#agenda ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-left: 1.5rem;
 }
 
 section {
@@ -52,32 +87,6 @@ fieldset {
     padding: 20px;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #7fc984;
-    z-index: 1000;
-    padding-bottom: 10px;
-}
-
-/* Hover effect for links in nav */
-nav a:hover {
-    text-decoration: underline;
-    color: #033f10;
-}
-  
-/* Active button */
-button:active {
-    transform: scale(0.50);
-    background-color: #388e3c;
-}
-
-footer {
-    border-top: 2px solid #034608;
-    margin-top: 20px;
-    padding: 10px;
-}
-
 .whiteboard {
     text-align: center;
 }
@@ -90,3 +99,8 @@ footer {
 }
 
 
+footer {
+    border-top: 2px solid #034608;
+    margin-top: 20px;
+    padding: 10px;
+}
