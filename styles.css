@@ -4,6 +4,10 @@
     --accent-color: color-mix(in srgb, red 40%, blue); /* CSS color mix with fallback */
 }
 
+* {
+    box-sizing: border-box; /* Universal selector */
+}
+
 body {
     font-family: 'Roboto', sans-serif; /* Google font */
     color: var(--main-color, black); /* variable with fallback */
@@ -23,6 +27,10 @@ header {
     position: relative;
     height: auto; /* absolute unit */
     max-width: 100vw; /* relative unit */
+}
+
+header > h3 {
+    color: orange; /* Child combinator example */
 }
 
 /* =================== NAVIGATION =================== */
@@ -50,12 +58,20 @@ nav li a {
     display: inline-block; /* required display value */
 }
 
+nav li + li {
+    margin-left: 0.5rem; /* Adjacent sibling combinator */
+}
+
 nav a:hover {
     color: orange; /* named color */
 }
 
 nav a:active {
     transform: scale(0.9); /* pseudo-class :active */
+}
+
+nav a[title] {
+    text-decoration: underline; /* Attribute selector */
 }
 
 /* =================== FLEXBOX LAYOUT =================== */
@@ -96,6 +112,10 @@ form {
     max-width: 600px;
 }
 
+form:has(input[type="radio"]) {
+    background-color: #fefae0; /* New selector: :has() */
+}
+
 /* =================== SECTION =================== */
 section {
     border-style: dotted;
@@ -104,6 +124,10 @@ section {
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1rem;
+}
+
+section > p.highlight {
+    font-weight: bold; /* Combining two selectors */
 }
 
 /* =================== TEXT STYLES =================== */
@@ -118,6 +142,10 @@ figcaption {
     color: hsl(240, 5%, 30%); /* HSL */
 }
 
+h2, figcaption {
+    letter-spacing: 0.5px; /* Selector list */
+}
+
 /* =================== IMAGES & SIZING =================== */
 .whiteboard-img {
     min-width: 300px; /* absolute unit */
@@ -125,6 +153,10 @@ figcaption {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+img.whiteboard-img ~ figcaption {
+    color: darkslategray; /* General sibling combinator */
 }
 
 /* =================== DISPLAY EXPERIMENT =================== */
@@ -155,3 +187,8 @@ footer span {
         width: 100%;
     }
 }
+
+/* =================== FONT IMPORT =================== */
+/* Included in HTML <head>: 
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+*/
