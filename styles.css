@@ -95,3 +95,63 @@ form {
     margin: 10px auto 20px auto; /* shorthand + auto margin */
     max-width: 600px;
 }
+
+/* =================== SECTION =================== */
+section {
+    border-style: dotted;
+    border-color: #034608; /* hex code */
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* =================== TEXT STYLES =================== */
+h1, h2, h3 {
+    text-align: center;
+    color: #222; /* hex code */
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    color: hsl(240, 5%, 30%); /* HSL */
+}
+
+/* =================== IMAGES & SIZING =================== */
+.whiteboard-img {
+    min-width: 300px; /* absolute unit */
+    max-width: 100%; /* relative unit */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =================== DISPLAY EXPERIMENT =================== */
+footer span {
+    display: none;
+}
+
+#feedback label {
+    display: block;
+}
+
+/* =================== RESPONSIVENESS =================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #agenda ol {
+        flex-direction: column;
+    }
+
+    .whiteboard-img {
+        width: 100%;
+    }
+}
